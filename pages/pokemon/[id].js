@@ -23,6 +23,7 @@ export async function getStaticProps({params}) {
 		props:{
 			pokemon:await resp.json(),
 		},
+		revalidate: 30,
 	 };
 }
 export default function Details({pokemon}){
